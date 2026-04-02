@@ -99,7 +99,28 @@ While the initial CAPEX for a 3D-MIM chiplet panel will be significantly higher 
 1. **3x Spatial Density:** Generating 1.2 kW per $2\,m^2$ reduces land acquisition and BoS (Balance of System) costs by 66%.
 2. **24/7 Baseline Generation:** Earth thermal harvesting (30-50 W) transforms the asset into a continuous baseload generator, drastically reducing the need for expensive Battery Energy Storage Systems.
 
-## 8. The "Lab-to-Fab" Roadmap
+## 8. Part III: The Active Core Paradigm (Active Field-Effect Rectification)
+
+## 8.1. Evolution to AFET: Active Field-Effect Rectenna
+To transcend the physical "Zero-Bias" limitations of passive MIM-diodes, the ATLAS Matrix integrates a third control terminal — the **Gate (G)**. This transforms the static panel into an **Active Field-Effect Rectenna (AFET)**, shifting the technology from passive hardware to a software-defined energy processor.
+
+
+
+### 8.1.2. Gate-Modulated Tunneling Control
+In low-intensity environments (night-time thermal harvesting or deep space), ambient IR energy may be insufficient to overcome the natural potential barrier of a passive diode. By applying a localized electric field through an ALD-deposited gate dielectric, we can dynamically modulate the tunneling barrier height:
+
+$$\Phi_b(V_G) = \Phi_0 - \alpha \sqrt{V_G}$$
+
+This "Active Bias" allows the matrix to remain electronically "open" and efficient even when harvesting the faintest thermal signatures, effectively eliminating the "turn-on voltage" bottleneck.
+
+### 8.1.3. Software-Defined Energy (SDE)
+The **Active Core** enables a level of energy management previously impossible in photovoltaics:
+
+* **Dynamic Frequency Tuning:** By modulating the gate voltage, we shift the plasma resonance of the nano-antennas. This allows the panel to "tune in" to peak solar IR during the day and Earth's thermal glow ($\approx 10\,\mu m$) at night.
+* **Adaptive Matrix Topology:** The system can programmatically switch between series and parallel configurations at the chiplet level. The panel outputs a stabilized, pre-defined voltage directly to the load, removing the need for heavy external DC-DC converters or inverters.
+* **Digital Fault Isolation:** Shaded or damaged sectors are "switched off" at the gate level in nanoseconds. This prevents parasitic current loops and the "hot-spot" effect without the use of inefficient external bypass diodes.
+
+## 9. The "Lab-to-Fab" Roadmap
 
 We do not need to invent new manufacturing paradigms; we need to synthesize existing ones. The roadmap spans 3 distinct phases:
 
@@ -107,7 +128,7 @@ We do not need to invent new manufacturing paradigms; we need to synthesize exis
 * **Phase II: The Tiled Matrix (Months 12-24).** Scaling to a 10x10 cm module. Integration of the Mass Transfer process (MicroLED equipment). Implementation of the graphene-doped contact mesh.
 * **Phase III: Commercial Pre-Series (Months 24-36).** Assembly of the first full $2\,m^2$ panel. Demonstration of 1+ kW daytime yield and validation of night-time thermal baseline generation.
 
-## 9. Conclusion: The End of the Silicon Era
+## 10. Conclusion: The End of the Silicon Era
 
 Silicon photovoltaics was the necessary stepping stone for the 20th and early 21st centuries. But it has reached its thermodynamic and economic limit. The universe is bathed in infrared radiation. By transitioning from semiconductor bandgaps to 3D nano-antenna architectures, we are not just improving solar panels—we are unlocking the ability to harvest the ambient thermal pulse of the planet. The machines to build this already exist. The physics is proven. The next step is execution.
 
@@ -185,13 +206,36 @@ $$LCOE=\frac{\sum_{t=1}^{n}\frac{I_t+M_t}{(1+r)^t}}{\sum_{t=1}^{n}\frac{E_t}{(1+
 
 Включение ночного сбора тепла и трехкратное увеличение мощности с 1 квадратного метра позволяет ректенным панелям обойти кремний по LCOE уже в первые 3 года.
 
-## 8. Дорожная карта "Lab-to-Fab"
+---
+
+# Часть III: Парадигма Active Core (Полевое выпрямление)
+
+## 8.1. Эволюция в AFET: Активная Полевая Ректенна
+Для преодоления физического барьера «нулевого смещения» пассивных MIM-диодов, ATLAS Matrix интегрирует третий управляющий электрод — **Затвор (Gate)**. Это превращает статичную панель в **Активную Полевую Ректенну (AFET)**, переводя технологию из разряда пассивного «железа» в категорию программно-определяемых энергетических процессоров.
+
+
+
+### 8.1.2. Модуляция туннелирования затвором
+В условиях низкой интенсивности излучения (ночной сбор тепла или глубокий космос) энергии фонового ИК может быть недостаточно для преодоления естественного барьера пассивного диода. Прикладывая локальное электрическое поле через напыленный метод ALD диэлектрик затвора, мы можем динамически изменять высоту туннельного барьера:
+
+$$\Phi_b(V_G) = \Phi_0 - \alpha \sqrt{V_G}$$
+
+Это «активное смещение» позволяет матрице оставаться электронной «открытой» и эффективной даже при сборе слабейших тепловых сигнатур, фактически устраняя проблему «порога открытия» диода.
+
+### 8.1.3. Программно-определяемая энергия (SDE)
+Интеграция **Active Core** открывает возможности управления энергией, недоступные для классической фотовольтаики:
+
+* **Динамическая подстройка частоты:** Модулируя напряжение на затворе, мы смещаем плазменный резонанс наноантенн. Это позволяет панели «настраиваться» на пик солнечного ИК днем и тепловое свечение Земли ($\approx 10\,\mu m$) ночью.
+* **Адаптивная топология матрицы:** Система может программно переключаться между последовательным и параллельным соединением на уровне чиплетов. Панель выдает стабилизированное напряжение напрямую потребителю, исключая необходимость в тяжелых внешних инверторах.
+* **Цифровая изоляция дефектов:** Затененные или поврежденные сектора «отключаются» на уровне затвора за наносекунды. Это предотвращает возникновение паразитных токов и эффект «горячих точек» без использования неэффективных внешних байпасных диодов.
+
+## 9. Дорожная карта "Lab-to-Fab"
 
 * **Фаза I (1-12 мес):** Создание чиплета 5x5 мм (литография 90 нм + ALD).
 * **Фаза II (12-24 мес):** Матрица 10x10 см. Интеграция Mass Transfer и графеновой сетки.
 * **Фаза III (24-36 мес):** Сборка панели $2\,m^2$. Демонстрация дневной выработки (1+ кВт) и ночной генерации.
 
-## 9. Заключение
+## 10. Заключение
 
 Кремний достиг своего предела. Вселенная пронизана инфракрасным излучением. Переходя к 3D-наноантеннам, мы открываем способность собирать фоновый тепловой пульс планеты. Станки существуют. Физика доказана. Следующий шаг — исполнение.
 
