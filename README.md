@@ -194,4 +194,5 @@ $$LCOE=\frac{\sum_{t=1}^{n}\frac{I_t+M_t}{(1+r)^t}}{\sum_{t=1}^{n}\frac{E_t}{(1+
 ## 9. Заключение
 
 Кремний достиг своего предела. Вселенная пронизана инфракрасным излучением. Переходя к 3D-наноантеннам, мы открываем способность собирать фоновый тепловой пульс планеты. Станки существуют. Физика доказана. Следующий шаг — исполнение.
+
 © 2026 Architect. This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
